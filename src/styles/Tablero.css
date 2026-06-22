@@ -1,0 +1,131 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contenedor {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.encabezado {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.encabezado h1 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+.reiniciar {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.puntos {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.caja {
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 6px;
+  text-align: center;
+}
+
+.caja span:first-child {
+  display: block;
+  font-size: 9px;
+  color: #aaa;
+}
+
+.caja span:last-child {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+}
+
+.dorado {
+  color: #f5c542;
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: min(90vw, 450px);
+  height: min(90vw, 450px);
+  background: #333;
+  border: 2px solid #555;
+}
+
+.celda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555;
+  font-size: 24px;
+  cursor: pointer;
+  background: white;
+}
+
+.canecas {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 8px 0;
+}
+
+.caneca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caneca img {
+  width: 80px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.caneca span {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #1e2a3a;
+  background: rgba(255,255,255,0.9);
+  padding: 2px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .celda { font-size: 18px; }
+  .caneca img { width: 60px; height: 75px; }
+}
